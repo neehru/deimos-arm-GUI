@@ -15,5 +15,13 @@ The React Compiler is not enabled on this template because of its impact on dev 
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 
-# install node.js (LTS ver): nodejs.org
-# need npm
+## Prerequisites
+- install node.js (LTS ver): nodejs.org
+- need npm (^^)
+- need rosbridge: sudo apt install ros-humble-rosbridge-server
+- socat/websocat: sudo apt install socat
+    - sudo apt install nodejs npm -y
+    - sudo npm install -g wscat
+- npm install roslib 
+- npm install terminal-in-react --save
+

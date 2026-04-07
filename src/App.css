@@ -1,13 +1,15 @@
 .setHome,
 .goToHome {
   font-size: 16px;
-  padding: 5px 10px;
+  padding: 5px 11px;
   border-radius: 5px;
   color: var(--accent);
   background: var(--accent-bg);
   border: 2px solid transparent;
   transition: border-color 0.3s;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
+  width: 95%;
+  align-items: center;
 
   &:hover {
     border-color: var(--accent-border);
@@ -18,10 +20,12 @@
   }
 }
 
+
 #title{
   text-align: left;
   padding-left: 1%;
   display: flex;
+  border: 1px solid var(--border);
 
   .MarsWorksLogo {
     height: 10vh;
@@ -69,109 +73,75 @@
   }
 }
 
+#section{
+  background-color: var(--border);
+  /* border-radius: 25px; */
+  width: 98%;
+  height: 95%;
+  margin: auto;
+  margin-top: 10px;
+
+  h2{
+    padding: 5px;
+  }
+}
+
 #main{
   display: flex;
   flex-direction: row;
   place-content: center;
   place-items: center;
   flex-grow: 1;
-  background-color: green;
   height:100%;
   align-items: stretch;
 }
+
 
 #left {
   display: flex;
   flex-direction: column;
   place-content: center;
   place-items: center;
+  text-align: left;
   flex: 1;
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 #home{
-  border: 1px solid var(--border);
+  /* border: 1px solid var(--border); */
   width:100%;
   flex: 1;
 }
 
 #move{
-  border: 1px solid var(--border);
+  /* border: 1px solid var(--border); */
   width:100%;
   flex:3;
 }
 
 #right {
   display: flex;
-  border-top: 1px solid var(--border);
+  /* border: 1px solid var(--border); */
   text-align: left;
   flex: 3;
   flex-direction: column;
-  background-color: red;
+  /* background-color: red; */
 
-  & > div {
-    flex: 1 1 auto;
-    padding: 32px;
-  }
 }
 
-
-#right ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
-
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-  }
-}
 
 #camera{
-  border: 1px solid var(--border);
+  /* border: 1px solid var(--border); */
+  flex: 1;
 }
 
 #terminal{
-  border: 1px solid var(--border);
+  /* border: 1px solid var(--border); */
+  flex: 1;
 }
 
 #spacer {
-  height: 88px;
+  height: 30px;
   border-top: 1px solid var(--border);
   @media (max-width: 1024px) {
     height: 48px;
