@@ -10,16 +10,19 @@ function App() {
   useEffect(() => {
     const ws = new WebSocket("ws://localhost:9090");
     setSocket(ws);
-    ws.onopen = () => console.log("We're live!");
+    ws.onopen = () => console.log("WebSocket open");
     ws.onmessage = (event) => setMessages((oldStuff) => [...oldStuff, event.data]);
-    ws.onclose = () => console.log("Whoops, dropped the call.");
+    ws.onclose = () => console.log("WebSocket closed");
     return () => ws.close();
   }, []);
   
   const sendMessage = () => {
     if (input && socket) {
-    socket.send(input);
-    setInput(""); // Wipe it clean
+      setMessages((prev) => [...prev, `> ${input}`]);
+      
+      socket.send(input);
+      console.log("sending input: "+ input);
+      setInput("");
     }
   };
 
@@ -27,12 +30,12 @@ function App() {
   const handleTyping = (e) => {
     setInput(e.target.value);
     setIsTyping(true);
-    setTimeout(() => setIsTyping(false), 1000); // Chill after a sec
+    setTimeout(() => setIsTyping(false), 1000);
     };
 
   return (
     <div className="App">
-      <div className="chat-box">
+      <div className="cmd-box">
         {messages.map((msg, i) => (
         <p key={i}>{msg}</p>
         ))}
@@ -41,7 +44,7 @@ function App() {
       <input
         value={input}
         onChange={handleTyping}
-        placeholder="Say something wild…"
+        placeholder="Text input..."
       />
       <button onClick={sendMessage}>Send It</button>
     </div>

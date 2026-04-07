@@ -1,15 +1,14 @@
 .App {
-  max-width: 600px;
+  max-width: 98%;
   margin: 20px auto;
   text-align: center;
 }
-.chat-box {
-  border: 1px solid #ddd;
+.cmd-box {
   padding: 15px;
   height: 300px;
   background-color: black;
   color: rgb(55, 255, 0);
-  overflow-y: scroll; /* No chopped messages, please */
+  overflow-y: scroll;
 }
 input {
   padding: 8px;
@@ -17,9 +16,3 @@ input {
   width: 70%;
   border: 1px solid #ccc;
 }
-/* button {
-  padding: 8px 15px;
-  background: #007bff;
-  color: white;
-  border: none;
-} */
