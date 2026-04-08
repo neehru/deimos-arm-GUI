@@ -39,12 +39,12 @@ function App() {
     }
   };
 
-  const [isTyping, setIsTyping] = useState(false);
-  const handleTyping = (e) => {
-    setInput(e.target.value);
-    setIsTyping(true);
-    setTimeout(() => setIsTyping(false), 1000);
-    };
+  // const [isTyping, setIsTyping] = useState(false);
+  // const handleTyping = (e) => {
+  //   setInput(e.target.value);
+  //   setIsTyping(true);
+  //   setTimeout(() => setIsTyping(false), 1000);
+  // };
 
     
 
@@ -55,11 +55,16 @@ function App() {
         <p key={i}>{msg}</p>
         ))}
       </div>
-      {isTyping && <p>Typing…</p>}
-      <input
+      {/* {isTyping && <p>Typing…</p>} */}
+      {/* <input
         value={input}
         onChange={handleTyping}
         placeholder="Text input..."
+      /> */}
+      <input
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        placeholder="Say something wild..."
       />
       <button onClick={sendMessage}>Send It</button>
     </div>
