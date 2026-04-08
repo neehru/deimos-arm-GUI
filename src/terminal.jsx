@@ -10,7 +10,20 @@ function App() {
   useEffect(() => {
     const ws = new WebSocket("ws://localhost:9090");
     setSocket(ws);
-    ws.onopen = () => console.log("WebSocket open");
+    ws.onopen = () => {
+      console.log("WebSocket open");
+
+      ws.send(JSON.stringify({
+        op: "subscribe",
+        topic: "/chatter"
+        }
+      ));
+
+      setMessages(prev => [
+        ...prev,
+        '> Subscribed to topic "/chatter"'
+      ]);
+    }
     ws.onmessage = (event) => setMessages((oldStuff) => [...oldStuff, event.data]);
     ws.onclose = () => console.log("WebSocket closed");
     return () => ws.close();
@@ -32,6 +45,8 @@ function App() {
     setIsTyping(true);
     setTimeout(() => setIsTyping(false), 1000);
     };
+
+    
 
   return (
     <div className="App">

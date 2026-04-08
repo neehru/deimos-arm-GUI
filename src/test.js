@@ -17,8 +17,11 @@ ros.on('connection', () => {
     let msg = {data: 'Hello from Node.js test'};
 
     // Publish the message
-    chatter.publish(msg);
-    console.log('📤 Message sent:', msg);
+    for(let i=0;i<10;i++){
+        chatter.publish(msg);
+        console.log('📤 Message sent:', msg);
+    }
+
 });
 
 ros.on('error', (error) => {
