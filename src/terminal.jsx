@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./App.css";
 import "./terminal.css";
 
@@ -6,6 +6,8 @@ function Terminal() {
   const [socket, setSocket] = useState(null);
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
+
+  const cmdBox = useRef(null);
 
   useEffect(() => {
     const ws = new WebSocket("ws://localhost:9090");
@@ -39,6 +41,12 @@ function Terminal() {
     }
   };
 
+  useEffect(() => {
+    if (cmdBox.current){
+        cmdBox.current.scrollTo(0, cmdBox.current.scrollHeight);
+      }
+  }, [messages]);
+
   // const [isTyping, setIsTyping] = useState(false);
   // const handleTyping = (e) => {
   //   setInput(e.target.value);
@@ -50,7 +58,7 @@ function Terminal() {
 
   return (
     <div className="Terminal">
-      <div className="cmd-box">
+      <div className="cmd-box" ref={cmdBox}>
         {messages.map((msg, i) => (
         <p key={i}>{msg}</p>
         ))}
