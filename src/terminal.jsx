@@ -61,12 +61,12 @@ function App() {
         onChange={handleTyping}
         placeholder="Text input..."
       /> */}
-      <input
+      {/* <input
         value={input}
         onChange={(e) => setInput(e.target.value)}
         placeholder="Say something wild..."
       />
-      <button onClick={sendMessage}>Send It</button>
+      <button onClick={sendMessage}>Send It</button> */}
     </div>
   );
 }

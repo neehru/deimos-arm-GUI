@@ -1,31 +1,17 @@
 import React from 'react'
-import Webcam from 'react-webcam'
 import App from './App';
 import './App.css'
+import './camera.css'
 
 function Camera(){
 
-    const VideoConstraints = {
-        width: 1280,
-        height: 720
-    };
-
-    const WebCamComponent = () => (
-        <Webcam
-            audio={false}
-            height={720}
-            width={1280}
-            videoConstraints={VideoConstraints}
-        >
-        </Webcam>
-    );
-    // console.log(WebCamComponent);
     return (
         <>
-            <p>TEST</p>
+            <div id="camera_feed">
+                <img src="src/assets/camera_feed_temp.png" alt="video feed temp image"/>
+            </div>
         </>
     )
-    // return <WebCam videoConstraints={videoConstraints} />;
 }
 
 export default Camera

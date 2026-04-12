@@ -1,0 +1,14 @@
+#camera_feed{
+    width: 98%;
+    height:80%;
+    margin: auto;
+    display: flex;
+    background-color: red;
+}
+
+#camera_feed img{
+    width: 100%;
+    height: 100%;
+}
+
+
