@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import "./terminal.css";
 
-function App() {
+function Terminal() {
   const [socket, setSocket] = useState(null);
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
@@ -49,7 +49,7 @@ function App() {
     
 
   return (
-    <div className="App">
+    <div className="Terminal">
       <div className="cmd-box">
         {messages.map((msg, i) => (
         <p key={i}>{msg}</p>
@@ -70,4 +70,4 @@ function App() {
     </div>
   );
 }
-export default App;
+export default Terminal;

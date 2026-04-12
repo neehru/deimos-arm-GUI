@@ -1,15 +1,24 @@
-.App {
+.Terminal {
   max-width: 98%;
-  margin: 20px auto;
+  height:80%;
+  margin:auto;
+  display: flex;
   text-align: center;
 }
 .cmd-box {
-  padding: 15px;
+  /* padding: 15px; */
+  width: 100%;
+  height: 100%;
   background-color: black;
   color: rgb(55, 255, 0);
   overflow-y: scroll;
+  text-align: left;
 
+  p{
+    margin-left: 10px;
+  }
 }
+
 input {
   padding: 8px;
   margin: 10px;
