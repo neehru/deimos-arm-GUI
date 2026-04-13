@@ -3,7 +3,7 @@
     height:80%;
     margin: auto;
     display: flex;
-    background-color: red;
+    /* background-color: red; */
 }
 
 #camera_feed img{
