@@ -17,10 +17,13 @@ ros.on('connection', () => {
     let msg = {data: 'Hello from Node.js test'};
 
     // Publish the message
-    for(let i=0;i<10;i++){
+    for (let i = 0; i < 10; i++) {
+    setTimeout(() => {
+        msg = {data: 'Hello /chatter this is message number '+ (i+1)};
         chatter.publish(msg);
         console.log('📤 Message sent:', msg);
-    }
+    }, i * 1000);
+}
 
 });
 
