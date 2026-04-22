@@ -125,7 +125,7 @@
 
   @media (max-width: 1024px) {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
   }
 }
 
@@ -136,9 +136,12 @@
   height:100%;
 
   @media (max-width: 1024px) {
-    /* display: flex; */
     flex-direction: row;
-    flex: 1;
+    /* flex: 1; */
+  }
+
+  @media (max-width: 720px) {
+    flex-direction: column;
   }
 }
 
@@ -153,6 +156,11 @@
     flex-direction: row;
     flex: 1;
   }
+
+  @media (max-width: 720px) {
+    flex-direction: column;
+    flex-direction: 1;
+  }
 }
 
 #right {
@@ -162,12 +170,6 @@
   flex-direction: column;
   min-height: 0;
   /* background-color: red; */
-
-  /* TODO: add phone stuff */
-  /* @media (max-width: 720px) {
-    display: flex;
-    flex-direction: row;
-  } */
 
 }
 
