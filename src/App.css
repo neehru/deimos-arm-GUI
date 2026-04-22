@@ -31,9 +31,14 @@
   border: 1px solid var(--border);
 
   .MarsWorksLogo {
-    height: 10vh;
+    /* height: 10vh; */
+    height: 75px;
     display: block;
     margin-left: auto;
+  }
+
+  @media (max-width: 720px) {
+    margin-bottom: 15px;
   }
 }
 
