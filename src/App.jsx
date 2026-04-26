@@ -37,6 +37,7 @@ function App() {
           <div id="move">
             <section id="section">
               <h2>Stuff to move arm here</h2>
+              <p>buttons</p>
             </section>
           </div>
 
