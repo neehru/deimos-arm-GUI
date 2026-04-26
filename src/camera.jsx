@@ -7,11 +7,11 @@ import JSMpeg from 'jsmpeg';
 
 function Camera(){
 
-    useEffect(() => {
-        const canvas = document.getElementById('videoCanvas');
-        const url = 'ws://192.168.0.113:9999';
-        new JSMpeg(url, { canvas: canvas, autoplay: true });
-    }, []);
+    // useEffect(() => {
+    //     const canvas = document.getElementById('videoCanvas');
+    //     const url = 'ws://192.168.0.113:9999';
+    //     new JSMpeg(url, { canvas: canvas, autoplay: true });
+    // }, []);
 
     return (
         <>

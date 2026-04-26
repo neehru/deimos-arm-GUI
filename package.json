@@ -4,13 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"node src/rosbridge.js\" \"vite\"",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@xterm/xterm": "^6.0.0",
+    "concurrently": "^9.2.1",
     "jsmpeg": "^1.0.0",
     "lodash.throttle": "^4.1.1",
     "perfect-cursors": "^1.0.5",
